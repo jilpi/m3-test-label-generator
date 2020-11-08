@@ -10,23 +10,24 @@
     <body>
         <div class="grid">
             <div class="textcell">
-                <lbl-booking>201108-KATHLEE</lbl-booking>
-                <lbl-service-type>COV19-RAPID</lbl-service-type><br/>
-                <lbl-lastname>Doe</lbl-lastname><br/>
-                <lbl-firstname>John</lbl-firstname><br/>
-                <lbl-sex>M</lbl-sex> <lbl-dob>01-JAN-2000</lbl-dob><br/>
-                <lbl-avs>1234567890</lbl-avs><br/>
-                <lbl-tel>+41.12345678</lbl-tel><br/>
-                <lbl-email>john.doe@m-3sanitrade.ch</lbl-email><br/>
+                <lbl-booking>@BOOKING@</lbl-booking>
+                <lbl-service-type>@SERVICE-TYPE@</lbl-service-type><br/>
+                <lbl-lastname>@LASTNAME@</lbl-lastname><br/>
+                <lbl-firstname>FIRSTNAME@</lbl-firstname><br/>
+                <lbl-sex>@SEX@</lbl-sex> <lbl-dob>@DOB@</lbl-dob><br/>
+                <lbl-avs>@AVS@</lbl-avs><br/>
+                <lbl-tel>@TEL@</lbl-tel><br/>
+                <lbl-email>@EMAIL@</lbl-email><br/>
                 ########################<br/>
                 ########################
             </div>
             <div class="qrcell">
-                <canvas id="qrcode">201108-KATHLEE</canvas><br/>
-                <lbl-site>Chêne</lbl-site>
+                <canvas id="qrcode">@QRCODE@</canvas><br/>
+                <lbl-site>@SITE@</lbl-site>
             </div>
         </div>
 
+        <script type="text/javascript" src="label-generator.js"></script>
 
         <script type="text/javascript">
             var qrcode;
