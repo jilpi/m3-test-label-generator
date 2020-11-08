@@ -1,0 +1,81 @@
+@page {
+    size: 58mm 28mm;
+    margin: 0; /* removes header/footer in chrome */
+}
+
+body {
+    font-size: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    font-variant: small-caps;
+    font-weight: bolder;
+    text-transform: uppercase;
+    -webkit-print-color-adjust: exact !important;
+    width: 58mm;
+    position: absolute;
+    top: 4mm;
+    left: 2mm;
+    bottom: 0px;
+    margin: auto;
+    margin-top: 0px !important;
+}
+
+div.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto min-content;
+}
+
+div.textcell {
+    float: left;
+    text-align: left;
+}
+
+div.qrcell {
+    width: min-content;
+    vertical-align: top;
+    text-align: right;
+}
+
+div.grid *::before {
+    font-weight: normal;
+}
+
+lbl-booking::before{
+    content: ""
+}
+lbl-site::before{
+    content: ""
+}
+
+lbl-service-type::before{
+    content: ""
+}
+lbl-service-type{
+    font-weight: bolder;
+    background-color: red;
+    color: white;
+    float: right;
+}
+
+lbl-firstname::before{
+    content: "Pré.: "
+}
+lbl-lastname::before{
+    content: "Nom : "
+}
+lbl-dob::before{
+    content: "Né/e: "
+}
+lbl-sex::before{
+    content: "Sexe: "
+}
+lbl-avs::before{
+    content: "AVS : "
+}
+lbl-tel::before{
+    content: "Tél.: "
+}
+lbl-email::before{
+    content: "@:"
+}

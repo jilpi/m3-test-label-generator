@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Label</title>
+        <link rel="stylesheet" href="label-qrious.css">
+        <script src="qrious/qrious.min.js"></script>
+    </head>
+
+    <body>
+        <div class="grid">
+            <div class="textcell">
+                <lbl-booking>201111-QER57Z2</lbl-booking>
+                <lbl-service-type>COV19-RAPID</lbl-service-type><br/>
+                <lbl-lastname>Doe</lbl-lastname><br/>
+                <lbl-firstname>John</lbl-firstname><br/>
+                <lbl-sex>M</lbl-sex> <lbl-dob>01-JAN-2000</lbl-dob><br/>
+                <lbl-avs>1234567890</lbl-avs><br/>
+                <lbl-tel>+41.12345678</lbl-tel><br/>
+                <lbl-email>john.doe@m-3sanitrade.ch</lbl-email><br/>
+                ########################<br/>
+                ########################
+            </div>
+            <div class="qrcell">
+                <canvas id="qrcode">201111-QER57Z2</canvas><br/>
+                <lbl-site>Chêne</lbl-site>
+            </div>
+        </table>
+
+
+        <script type="text/javascript">
+            var qrcode;
+            (function() {
+                qrcode = new QRious(
+                    {
+                        element: document.getElementById("qrcode"),
+                        value: document.getElementById("qrcode").innerHTML,
+                        level: "Q",
+                        size: 60,
+                        padding: 5
+                    }
+                )
+            })();
+        </script>
+    </body>
+</html>
