@@ -25,3 +25,5 @@ paramlist.forEach ((param)=>{
 })
 
 document.getElementById('qrcode').innerText = urlParams.get('booking');
+
+const autoprint = urlParams.has('autoprint');
