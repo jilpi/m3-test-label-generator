@@ -1,7 +1,7 @@
 // URL example: label-generator.html?booking=201108-ABCDEFG&site=Chêne&service-type=COV19-RAPID&firstname=John&lastname=Doe&sex=M&dob=01-JAN-2000&avs=0123456789&tel=+41.12345678&email=john.doe@m-3sanitrade.ch
 
 const queryString = window.location.search;
-console.log(queryString);
+console.info(`- Querystring: ${queryString}`);
 
 const urlParams = new URLSearchParams(queryString);
 
