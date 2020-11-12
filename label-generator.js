@@ -5,7 +5,6 @@ console.info(`- Querystring: ${queryString}`);
 
 const urlParams = new URLSearchParams(queryString);
 
-
 const paramlist = [
     "code",
     "site_name",
@@ -15,6 +14,7 @@ const paramlist = [
     "dob",
     "gender",
     "avs",
+    "insurance",
     "mobile",
     "email"
 ];
