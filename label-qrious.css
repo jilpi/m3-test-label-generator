@@ -34,7 +34,7 @@ div.textcell {
 div.qrcell {
     width: min-content;
     vertical-align: top;
-    text-align: center;
+    text-align: right;
 }
 
 div.grid *::before {
