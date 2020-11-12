@@ -10,20 +10,18 @@
     <body>
         <div class="grid">
             <div class="textcell">
-                <lbl-booking>@BOOKING@</lbl-booking>
-                <lbl-service-type>@SERVICE-TYPE@</lbl-service-type><br/>
                 <lbl-lastname>@LASTNAME@</lbl-lastname><br/>
                 <lbl-firstname>FIRSTNAME@</lbl-firstname><br/>
-                <lbl-sex>@SEX@</lbl-sex> <lbl-dob>@DOB@</lbl-dob><br/>
+                <lbl-gender>@GENDER@</lbl-gender> <lbl-dob>@DOB@</lbl-dob><br/>
                 <lbl-avs>@AVS@</lbl-avs><br/>
-                <lbl-tel>@TEL@</lbl-tel><br/>
+                <lbl-mobile>@MOBILE@</lbl-mobile><br/>
                 <lbl-email>@EMAIL@</lbl-email><br/>
-                ########################<br/>
-                ########################
+                <lbl-site_name>@SITE_NAME@</lbl-site_name>
             </div>
             <div class="qrcell">
-                <canvas id="qrcode">@QRCODE@</canvas><br/>
-                <lbl-site>@SITE@</lbl-site>
+                <lbl-service_type>@SERVICE-TYPE@</lbl-service_type><br/>
+                <lbl-code>@CODE@</lbl-code><br/>
+                <canvas id="qrcode">@QRCODE@</canvas>
             </div>
         </div>
 
@@ -32,10 +30,13 @@
         <script type="text/javascript">
             var qrcode;
             (function() {
+                const QRelement = document.getElementById("qrcode");
+                const QRvalue = document.getElementById("qrcode").innerHTML;
+                console.info(`- Generating QR for ${QRvalue}`);
                 qrcode = new QRious(
                     {
-                        element: document.getElementById("qrcode"),
-                        value: document.getElementById("qrcode").innerHTML,
+                        element: QRelement,
+                        value: QRvalue,
                         level: "Q",
                         size: 60,
                         padding: 5

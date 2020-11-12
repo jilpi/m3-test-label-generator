@@ -1,10 +1,10 @@
 @page {
-    size: 58mm 28mm;
+    size: 56mm 28mm;
     margin: 0; /* removes header/footer in chrome */
 }
 
 body {
-    font-size: 50%;
+    font-size: 60%;
     font-family: 'Courier New', Courier, monospace;
     font-variant: small-caps;
     font-weight: bolder;
@@ -34,28 +34,32 @@ div.textcell {
 div.qrcell {
     width: min-content;
     vertical-align: top;
-    text-align: right;
+    text-align: center;
 }
 
 div.grid *::before {
     font-weight: normal;
 }
 
-lbl-booking::before{
+/* lbl-code{
+    white-space: nowrap;
+} */
+lbl-code::before{
     content: ""
 }
-lbl-site::before{
+lbl-site_name::before{
     content: ""
 }
 
-lbl-service-type::before{
+lbl-service_type::before{
     content: ""
 }
-lbl-service-type{
+lbl-service_type{
+    white-space: nowrap;
     font-weight: bolder;
     background-color: red;
     color: white;
-    float: right;
+    /* float: right; */
 }
 
 lbl-firstname::before{
@@ -67,13 +71,13 @@ lbl-lastname::before{
 lbl-dob::before{
     content: "Né/e: "
 }
-lbl-sex::before{
+lbl-gender::before{
     content: "Sexe: "
 }
 lbl-avs::before{
     content: "AVS : "
 }
-lbl-tel::before{
+lbl-mobile::before{
     content: "Tél.: "
 }
 lbl-email::before{

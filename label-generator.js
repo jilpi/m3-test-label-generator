@@ -7,15 +7,15 @@ const urlParams = new URLSearchParams(queryString);
 
 
 const paramlist = [
-    "booking",
-    "site",
-    "service-type",
+    "code",
+    "site_name",
+    "service_type",
     "firstname",
     "lastname",
     "dob",
-    "sex",
+    "gender",
     "avs",
-    "tel",
+    "mobile",
     "email"
 ];
 
@@ -24,6 +24,6 @@ paramlist.forEach ((param)=>{
         document.getElementsByTagName(`lbl-${param}`)[0].innerHTML=urlParams.get(param);
 })
 
-document.getElementById('qrcode').innerText = urlParams.get('booking');
+document.getElementById('qrcode').innerText = urlParams.get('code');
 
 const autoprint = urlParams.has('autoprint');
